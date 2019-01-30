@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #5CDB95;
+    --main-text-color: #EDF5E1;
+    --main-figure-color: #05386B;
+  }
+
+.page {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .section {
+    width: 100%;
+    /* height: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    background-color: var(--main-bg-color);
+    height: 80px;
+  }
+  
+  .header {
+    background-color: var(--main-bg-color);
+    display: flex;
+  }
+  
+  .content {
+    background-color: var(--main-bg-color);
+    height: 600px;
+  }
+  
+  .whoami {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+  }
+  
+  .contact {
+    background-color: #F5CF8E;
+  }
+  
+  .milestones {
+    background-color: #F09A9D;
+  }
+  
+  .background {
+    background-color: #C8C6FA;
+  }
+
+  .fun {
+    background-color: #F5CF8E;
+  }
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+    body {
+      background-color: #F09A9D; /* Red */
+    }
+    .milestones {
+        width: 100%;
+        display: block;
+    }
+    .milestone-element {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        box-align: center;
+    }
+    .milestone-element-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+    .milestone-element-description {
+        width: 100%;
+        height: 35px;
+        text-align: center;
+    }
+    .social-media-button {
+      width: 10%;
+      margin: 3px;
+    }
+  }
+  
+  /* Tablet */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+      background-color: #F5CF8E; /* Yellow */
+    }
+  }
+  
+  /* Desktop */
+  @media only screen and (min-width: 961px) {
+    body {
+      background-color: #B2D6FF; /* Blue */
+    }
+  }

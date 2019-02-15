@@ -34,6 +34,14 @@ snipets
     background: rgba(108,54,221,0.6)
 }
 
+.social-bar {
+  position: fixed;
+  top: 2.43056vw;
+  right: 2.77778vw;
+  width: 37px;
+  text-align: center;
+  text-decoration: none;
+}
 
 .b_text {
     padding: 0 2.77778vw

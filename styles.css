@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    background-color:#111;
 }
 
 :root {
     --main-bg-color: #fff;
-    --main-text-color: #000000;
+    --main-text-color: #2a2a2a;
     --main-figure-color: #05386B;
   }
 
@@ -15,156 +15,94 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    color: #2a2a2a;
   }
   
-  .section {
-    width: 100%;
-    /* height: 300px; */
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 5px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid black;
-  }
-  
-  .menu {
-    background-color: var(--main-bg-color);
-  }
-  
-  .header {
-    display: block;
-    background-color: var(--main-bg-color);
-  }
-  
-  .content {
-    background-color: var(--main-bg-color);
-    height: 600px;
-  }
-  
-  .whoami {
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-  }
-  
-  .milestones {
-    background-color: var(--main-bg-color);
-  }
-  
-  .background {
-    background-color: #C8C6FA;
-  }
+  .e-mail:before {
+    content: attr(data-website) "\0040" attr(data-user);
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+snipets
+ /* selected text */
+ 
+::-moz-selection {
+    background: rgba(108,54,221,0.6)
+}
 
-  .fun {
-    background-color: var(--main-bg-color);
-  }
+::selection {
+    background: rgba(108,54,221,0.6)
+}
 
-/* Mobile */
-@media only screen and (max-width: 400px) {
-    h1 {
-      width: 100%;
+
+.b_text {
+    padding: 0 2.77778vw
+}
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+    .b_text {
+        background-color:#111;
+        padding-top: 7.29167vw;
+        padding-bottom: 7.29167vw
     }
-    h3 {
-      width: 100%;
+}
+
+.b_text_cover {
+    background-color:#111;
+    position: fixed;
+    top: 31%;
+    padding: 0 2.77778vw
+}
+
+@media screen and (max-height: 700px) {
+    .b_text_cover {
+        top:20%
     }
-    h2 {
-      margin-bottom: 10px;
+}
+
+.b_text__title {
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.0;
+    text-align: left;
+    color: #fff;
+    font-family: 'Roboto Mono'
+}
+
+@media screen and (min-aspect-ratio: 1 / 1) {
+    .b_text__title {
+        font-size:6.81944vw;
+        max-width: 47.8725vw
     }
-    body {
-      /* background-color: #F09A9D; Red */
-      background-color: #fff;
+}
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+    .b_text__title {
+        font-size:13.19444vw;
+        max-width: 197.91667vw
     }
-    .milestones {
-        width: 100%;
-        display: block;
-    }
-    .milestone-element {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        box-align: center;
-        margin-bottom: 15px;
-        margin-top: 15px;
-    }
-    .milestone-element-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-    .milestone-element-description {
-        width: 100%;
-        text-align: center;
-    }
-    a {
-      width: 12%;
-      height: 100%;
-    }
-    .social-media-button {
-      width: 90%;
-      margin: 3px;
-    }
-    .temporary-message {
-      display: none;
-    }
+}
+
+.b_text__lid {
+  font-family: 'Work Sans';
+  line-height: 1.5;
+  text-align: left;
+  color: #fff;
+  margin-top: 27px;
+  font-size: 24px;
+  max-width: 360px
+}
+
+@media screen and (max-width: 719px) {
+  .b_text__lid {
+      font-size:3.33333vw;
+      max-width: 50vw
   }
-  
-  /* Tablet */
-  @media only screen and (min-width: 401px) and (max-width: 960px) {
-    body {
-      background-color: #fff; /* Yellow */
-    }
-    .section {
-      display: none;
-    }
-    .temporary-message {
-      width: 100%;
-      text-align: center;
-    }
-    .social-media-temporary {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-    }
-    .social-media-button {
-      width: 100%;
-      margin: 3px;
-    }
-    a {
-      width: 10%;
-      height: 100%;
-    }
+}
+
+@media screen and (max-aspect-ratio: 1 / 1) {
+  .b_text__lid {
+      font-size:5.55556vw;
+      max-width: 83.33333vw
   }
-  
-  /* Desktop */
-  @media only screen and (min-width: 961px) {
-    body {
-      background-color: #fff; /* Blue */
-    }
-    .section {
-      display: none;
-    }
-    .temporary-message {
-      width: 100%;
-      text-align: center;
-      margin: auto;
-    }
-    .social-media-temporary {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
-    }
-    .social-media-button {
-      width: 100%;
-      margin: 3px;
-    }
-    a {
-      width: 6%;
-      height: 100%;
-    }
-  }
+}

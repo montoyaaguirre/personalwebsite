@@ -43,6 +43,12 @@ snipets
   text-decoration: none;
 }
 
+@media screen and (max-aspect-ratio: 1 / 1) {
+  .social-bar {
+      width: 15vw;
+  }
+}
+
 .b_text {
     padding: 0 2.77778vw
 }

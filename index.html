@@ -6,8 +6,9 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,700' rel='stylesheet'>
         <link rel='stylesheet' href='styles.css'/>
+        <script src="./external/typeit.min.js"></script>
     </head>
-    <body>
+    <body style="background-color:#111;">
         <div class="page">
             <div class="social-bar">
                 <a href="https://www.linkedin.com/in/manuel-montoya-aguirre/" >
@@ -19,8 +20,7 @@
             </div>
             <div class='b_text_cover'>
                 <div class='b_text__title' id="cover-title">
-                    Hi!
-                    I'm&nbsp;Manuel
+                    Hi! I'm&nbsp;Manuel
                 </div>
                 <div class='b_text__lid' id="cover-lid">
                     A software developer with focus on medical web applications.
@@ -30,4 +30,20 @@
             <!-- <span class="e-mail" data-user="erriugaayotnom" data-website="moc.liamg"></span> -->
         </div>
     </body>
+    <script type="text/javascript">
+        new TypeIt('#cover-title', {
+            breakLines: false,
+            waitUntilVisible: true,
+            cursor: false
+        }).go();
+        const lid = new TypeIt('#cover-lid', {
+            breakLines: false,
+            waitUntilVisible: true,
+            speed: 50
+        }).go();
+        lid.freeze();
+        setTimeout(() => {
+            lid.unfreeze();
+        }, 1500);
+    </script>
 </html>

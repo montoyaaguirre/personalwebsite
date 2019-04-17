@@ -6,10 +6,37 @@
     <title>Sliding Puzzle - Montoya</title>
   </head>
   <body>
-      <div id="app"></div>
-      <div id="board" class="board">
+      <div id="header">
+        <div id="app"></div>
+        <div id="options-button">
+          <img id="options-icon" src="assets/cog.svg">
+        </div>
+      </div>
+      <div id="board"></div>
+      <div id="options">
+        <div id="size-container" class="options-container">
+          <div class="options-label">Board size</div>
+          <div class="button-layout">
+            <button id="button3x3" class="button" type="button">3x3</button>
+            <button id="button4x4" class="button" type="button">4x4</button>
+            <button id="button5x5" class="button" type="button">5x5</button>
+          </div>
+        </div>
+        <div id="image-selection-container" class="image-selection-container">
+          <div class="options-label">Puzzle Image. Try an image URL</div>
+          <div>
+            <input class="options-label" type="text" id="image-url">
+          </div>
+          <img id="image-preview" src="https://montoyalabs.com/images/monks.jpg">
+        </div>
+        <div id="submit-cancel-container" class="options-container">
+          <div class="button-layout">
+            <button id="ok-button" class="button ok" type="button">Ok</button>
+            <button id="cancel-button" class="button cancel" type="button">Cancel</button>
+          </div>
+        </div>
       </div>
   </body>
 </html>
 
-<script data-main="js/index" src="node_modules/requirejs/require.js"></script>
+<script data-main="./js/index" src="./node_modules/requirejs/require.js"></script>

@@ -218,7 +218,11 @@ define('index',[
         puzzle.move(parseInt(pieceNumber));
         board.setPieceOrder(puzzle.getPieces());
         if (puzzle.isInWinState()) {
+            gameRunning = false;
             clearInterval(clockInterval);
+            const time =
+                new Date(elapsedTime * 1000).toISOString().substr(11, 8);
+            setHeader('Puzzle Completed in ' + time);
         }
     }
 
@@ -232,7 +236,14 @@ define('index',[
         );
         puzzle = new Puzzle(piecesPerSide * piecesPerSide, false);
         board.setPieceOrder(puzzle.getPieces());
+        resetGame();
+        updateTiming();
         return setInterval(updateTiming, 1000);
+    }
+
+    function resetGame() {
+        remainingTime = 5;
+        elapsedTime = 0;
     }
 
     function initOptionsMenu() {
@@ -291,6 +302,7 @@ define('index',[
                 setPuzzleImage(options.url);
             }
             board.clear('board');
+            clearInterval(clockInterval);
             clockInterval = initGame();
         }
         // Hide options

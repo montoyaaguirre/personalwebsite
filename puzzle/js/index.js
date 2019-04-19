@@ -303,6 +303,7 @@ define('index',[
             }
             board.clear('board');
             clearInterval(clockInterval);
+            gameRunning = false;
             clockInterval = initGame();
         }
         // Hide options
